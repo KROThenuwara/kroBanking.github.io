@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Bankist</title>
+  </head>
+  <body>
+    <!-- TOP NAVIGATION -->
+    <nav>
+      <p class="welcome">
+        <span class="kroBank"
+          >KRO Banking
+          <span class="material-symbols-outlined">
+            handshake
+            </span>
+      </p>
+      <img src="logo.png" alt="Logo" class="logo" />
+      <form class="login">
+        <input
+          type="text"
+          placeholder="user"
+          class="login__input login__input--user"
+        />
+        <input
+          type="password"
+          placeholder="PIN"
+          maxlength="4"
+          class="login__input login__input--pin"
+        />
+
+        <button class="login__btn">&rarr;</button>
+      </form>
+    </nav>
+    <div class="errmsg">&#9888; Invalid username or pin number</div>
+
+    <form class="sign__up">
+      <div class="sign_up__content">
+        <h1 class="sign__title">Wanna open an Account!</h1>
+        <h3 class="sign__msg">Sign up by filling this form</h3>
+        <div class="input__info">
+          <div class="input__info">
+            <input
+              type="text"
+              placeholder="UserName"
+              class="input__info__blank"
+              id="sign_up_userName"
+              maxlength="64"
+            />
+          </div>
+          <input
+            type="email"
+            placeholder="Email"
+            class="input__info__blank"
+            id="sign_up_fullName"
+            maxlength="64"
+          />
+        </div>
+        <div class="input__info">
+          <p class="pin__msg">
+            <span class="pin__star">*</span> pin should be 4 digit number
+          </p>
+          <input
+            placeholder="Pin"
+            class="input__info__blank"
+            id="sign_up_pin"
+            maxlength="4s"
+          />
+        </div>
+
+        <div class="input__info">
+          <p class="deposit__msg">
+            <span class="pin__star">*</span> Your at least should do a deposit
+            more than 2500Rs.
+          </p>
+
+          <input
+            placeholder="Deposit"
+            class="input__info__blank"
+            id="sign_up_deposit"
+            type="number"
+          />
+        </div>
+        
+        <input type="submit" class="confirm__signup" placeholder="Sign Up">
+      </div>
+    </form>
+
+    <main class="app">
+      <!-- BALANCE -->
+      <div class="balance">
+        <div>
+          <p class="balance__label">Current balance</p>
+          <p class="balance__date">
+            Here's info as <span class="date">05/03/2037</span>
+          </p>
+        </div>
+        <p class="balance__value">0000Rs</p>
+      </div>
+
+      <!-- MOVEMENTS -->
+      <div class="movements">
+        <div class="movements__row">
+          <div class="movements__type movements__type--deposit">2 deposit</div>
+          <div class="movements__date">3 days ago</div>
+          <div class="movements__value">4 000Rs</div>
+        </div>
+        <div class="movements__row">
+          <div class="movements__type movements__type--withdrawal">
+            1 withdrawal
+          </div>
+          <div class="movements__date">24/01/2037</div>
+          <div class="movements__value">-378Rs</div>
+        </div>
+      </div>
+
+      <!-- SUMMARY -->
+      <div class="summary">
+        <p class="summary__label">In</p>
+        <p class="summary__value summary__value--in">0000€</p>
+        <p class="summary__label">Out</p>
+        <p class="summary__value summary__value--out">0000€</p>
+        <p class="summary__label">Interest</p>
+        <p class="summary__value summary__value--interest">0000€</p>
+        <button class="btn--sort">&downarrow; SORT</button>
+      </div>
+
+      <!-- OPERATION: TRANSFERS -->
+      <div class="operation operation--transfer">
+        <h2>Transfer money</h2>
+        <form class="form form--transfer">
+          <input type="text" class="form__input form__input--to" />
+          <input type="number" class="form__input form__input--amount" />
+          <button class="form__btn form__btn--transfer">&rarr;</button>
+          <label class="form__label">Transfer to</label>
+          <label class="form__label">Amount</label>
+        </form>
+      </div>
+
+      <!-- OPERATION: LOAN -->
+      <div class="operation operation--loan">
+        <h2>Request loan</h2>
+        <form class="form form--loan">
+          <input type="number" class="form__input form__input--loan-amount" />
+          <button class="form__btn form__btn--loan">&rarr;</button>
+          <label class="form__label form__label--loan">Amount</label>
+        </form>
+      </div>
+
+      <!-- OPERATION: CLOSE -->
+      <div class="operation operation--close">
+        <h2>Logout</h2>
+        <form class="form form--close">
+          <input type="text" class="form__input form__input--user" />
+          <input
+            type="password"
+            maxlength="6"
+            class="form__input form__input--pin"
+          />
+          <button class="form__btn form__btn--close">&rarr;</button>
+          <label class="form__label">Confirm user</label>
+          <label class="form__label">Confirm PIN</label>
+        </form>
+      </div>
+
+      <!-- LOGOUT TIMER -->
+      <p class="logout-timer">
+        You will be logged out in <span class="timer">05:00</span>
+      </p>
+
+      <p class="termsnconditions">Terms and Conditions</p>
+    </main>
+    <section class="externalWindows">
+      <div class="termsNconditonWindow">
+        '
+        <h1 class="terms__title">TERMS AND CONDITIONS</h1>
+
+        <div class="termset">
+          <li class="terms__terms">
+            You should enter the correct Bank userName and pin to login to your
+            account
+          </li>
+          <li class="terms__terms">
+            You can not transfer money to your own account from transfer money
+            option
+          </li>
+          <li class="terms__terms">
+            You should have at least one deposit which must be twice amount of
+            requesting loan amount
+          </li>
+          <li class="terms__terms">
+            You can only transfer money to existing bank account
+          </li>
+          <li class="terms__terms">
+            When you requesting a loan you should have at least one deposite
+            which should be at least 10 times of the loan amount
+          </li>
+          <li class="terms__terms">
+            You can not delete your account without knowing the userName and pin
+          </li>
+          <li class="terms__terms">
+            Your userName will be your firstName with all simple and no spaces
+          </li>
+          <li class="terms__terms">
+            For security purposes if you did not do anything for 5 minutes
+            straight you'll be loged out
+          </li>
+        </div>
+        <button class="btn__closeWindow">Close</button>
+      </div>
+
+      <div class="invalidInputErrMsgs">
+        <h1 class="msgTitle">Error</h1>
+        <p class="msgText">
+          Sorry, The userName which you have enterd to transfer money did not
+          exist. Please re-check the userName and try again
+        </p>
+        <button class="msgClose">OK</button>
+      </div>
+
+      <div class="otherMsg">
+        <p class="otherMsgText">
+          Please wait. Your loan is being proccesed
+          <span class="Loading">
+            <span class="dot">.</span><span class="dot">.</span
+            ><span class="dot">.</span><span class="dot">.</span>
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <footer>&copy; by K.R.O.Thenuwara</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
